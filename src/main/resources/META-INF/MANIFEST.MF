@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: com.aiqin.Application
+Application-Name: ExcelReport
+Application-Description: ExcelReport
+Application-Version: 0.1
