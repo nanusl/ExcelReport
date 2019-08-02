@@ -1,6 +1,6 @@
-import com.github.liaochong.html2excel.core.ExcelBuilder;
-import com.github.liaochong.html2excel.core.FreemarkerExcelBuilder;
-import com.github.liaochong.html2excel.core.HtmlToExcelFactory;
+import com.github.liaochong.myexcel.core.ExcelBuilder;
+import com.github.liaochong.myexcel.core.FreemarkerExcelBuilder;
+import com.github.liaochong.myexcel.core.HtmlToExcelFactory;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Test;
 
@@ -21,11 +21,11 @@ public class ApplicationTests {
     @Test
     public void HtmlExportTest() throws Exception {
 
-        File htmlFile = Paths.get("C:\\Users\\ProcoRosso\\Desktop\\in.html").toFile();
+        File htmlFile = Paths.get("test_20190802.html").toFile();
 
         Workbook workbook = HtmlToExcelFactory.readHtml(htmlFile).useDefaultStyle().build();
 
-        Path outPath = Paths.get(("C:\\Users\\ProcoRosso\\Desktop\\excel.xlsx"));
+        Path outPath = Paths.get("excel.xlsx");
 
         workbook.write(Files.newOutputStream(outPath));
     }
@@ -37,7 +37,7 @@ public class ApplicationTests {
 
         Workbook workbook = excelBuilder.template("/templates/freemarker_template.ftl").build(new HashMap<>());
 
-        Path outPath = Paths.get(("C:\\Users\\ProcoRosso\\Desktop\\freeMarketExport.xlsx"));
+        Path outPath = Paths.get("freeMarketExport.xlsx");
 
         workbook.write(Files.newOutputStream(outPath));
     }

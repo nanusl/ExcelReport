@@ -1,6 +1,6 @@
 package com.aiqin;
 
-import com.github.liaochong.html2excel.core.HtmlToExcelFactory;
+import com.github.liaochong.myexcel.core.HtmlToExcelFactory;
 import org.apache.poi.ss.usermodel.Workbook;
 
 import java.nio.file.Files;
