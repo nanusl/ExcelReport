@@ -39,7 +39,7 @@ public class Application {
 
             Path htmlPath = Paths.get(htmlFilePath);
 
-            Workbook workbook = HtmlToExcelFactory.readHtml(htmlPath.toFile()).useDefaultStyle().build();
+            Workbook workbook = HtmlToExcelFactory.readHtml(htmlPath.toFile()).build();
 
             Path outPath = Paths.get(outFilePath);
 

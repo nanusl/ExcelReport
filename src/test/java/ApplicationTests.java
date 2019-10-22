@@ -23,7 +23,7 @@ public class ApplicationTests {
 
         File htmlFile = Paths.get("test_20190802.html").toFile();
 
-        Workbook workbook = HtmlToExcelFactory.readHtml(htmlFile).useDefaultStyle().build();
+        Workbook workbook = HtmlToExcelFactory.readHtml(htmlFile).build();
 
         Path outPath = Paths.get("excel.xlsx");
 
